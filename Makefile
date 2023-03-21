@@ -2,10 +2,10 @@ CUR_DIR := $(shell pwd)
 STAGE_DIR := $(CUR_DIR)/stage
 OUTPUT_DIR := $(CUR_DIR)/output
 
-TC := gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu
-TCURL := https://developer.arm.com/-/media/Files/downloads/gnu-a/10.3-2021.07/binrel/$(TC).tar.xz
+TC := arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu
+TCURL := https://developer.arm.com/-/media/Files/downloads/gnu/11.3.rel1/binrel/$(TC).tar.xz
 
-KDIR := linux-5.10.162
+KDIR := linux-5.10.175
 KCFG := catdrive_defconfig
 KDTS := $(KDIR)/arch/arm64/boot/dts/marvell/armada-3720-catdrive.dts
 KURL := https://cdn.kernel.org/pub/linux/kernel/v5.x/$(KDIR).tar.xz

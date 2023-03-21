@@ -4,7 +4,7 @@ linux-5.10.y LTS kernel for marvell armada-3720-catdrive
 
 #### toolchain
 
-    gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu
+    arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu
 
 fetch latest gnu toolchain from
 
