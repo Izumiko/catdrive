@@ -4,7 +4,7 @@ linux-6.1.y LTS kernel for marvell armada-3720-catdrive
 
 #### toolchain:
 
-    gcc-arm-11.2-2022.02-x86_64-aarch64-none-linux-gnu
+    arm-gnu-toolchain-11.3.rel1-x86_64-aarch64-none-linux-gnu
 
 fetch latest gnu toolchain from
 
@@ -13,7 +13,7 @@ fetch latest gnu toolchain from
 #### kernel:
 
     https://www.kernel.org
-    branch: linux-5.15.y
+    branch: linux-6.1.y
 
 #### build:
 
