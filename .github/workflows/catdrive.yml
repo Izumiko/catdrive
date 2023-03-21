@@ -9,7 +9,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     steps:
 
     - name: Initialize environment
@@ -18,7 +20,7 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo -E apt-get update -y
-        sudo -E apt-get install binfmt-support bsdtar build-essential debootstrap jq tar u-boot-tools wget xz-utils -y
+        sudo -E apt-get install binfmt-support libarchive-tools build-essential debootstrap jq tar u-boot-tools wget xz-utils -y
         sudo -E apt-get clean
 
     - name: Checkout
@@ -40,6 +42,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        draft: false
+        draft: true
         prerelease: false
         files: output/release/*

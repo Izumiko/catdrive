@@ -1,5 +1,5 @@
-KERNEL := https://github.com/vgist/catdrive/releases/download
-RELEASE_TAG = Kernel-5.10.162
+KERNEL := https://github.com/Izumiko/catdrive/releases/download
+RELEASE_TAG = kernel-release
 DTB := armada-3720-catdrive.dtb
 
 DTB_URL := $(KERNEL)/$(RELEASE_TAG)/$(DTB)
@@ -7,7 +7,7 @@ KERNEL_URL := $(KERNEL)/$(RELEASE_TAG)/Image
 KMOD_URL := $(KERNEL)/$(RELEASE_TAG)/modules.tar.xz
 
 QEMU_URL := https://github.com/multiarch/qemu-user-static/releases/download
-QEMU_TAG = v7.1.0-2
+QEMU_TAG = v7.2.0-1
 QEMU := x86_64_qemu-aarch64-static
 
 TARGETS := debian archlinux alpine ubuntu
@@ -47,7 +47,7 @@ $(DL_KERNEL)/modules.tar.xz:
 	$(call download,$(DL_KERNEL),$(KMOD_URL))
 
 ALPINE_BRANCH := v3.17
-ALPINE_VERSION := 3.17.0
+ALPINE_VERSION := 3.17.2
 ALPINE_PKG := alpine-minirootfs-$(ALPINE_VERSION)-aarch64.tar.gz
 RESCUE_ROOTFS := tools/rescue/rescue-alpine-catdrive-$(ALPINE_VERSION)-aarch64.tar.xz
 ALPINE_URL_BASE := http://dl-cdn.alpinelinux.org/alpine/$(ALPINE_BRANCH)/releases/aarch64
@@ -91,7 +91,7 @@ else
 archlinux:
 endif
 
-UBUNTU_PKG := ubuntu-base-22.04.1-base-arm64.tar.gz
+UBUNTU_PKG := ubuntu-base-22.04.2-base-arm64.tar.gz
 UBUNTU_URL_BASE := http://cdimage.ubuntu.com/ubuntu-base/releases/jammy/release
 
 ubuntu_dl: dl_kernel $(DL)/$(UBUNTU_PKG)

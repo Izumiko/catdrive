@@ -27,7 +27,7 @@ ext_init_param() {
 }
 
 chroot_post() {
-	sed -i 's#http://ports.ubuntu.com#https://mirror.sjtu.edu.cn/ubuntu-ports/#' $rootfs_mount_point/etc/apt/sources.list
+	sed -i 's#http://ports.ubuntu.com#https://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/#' $rootfs_mount_point/etc/apt/sources.list
 }
 
 add_services() {

@@ -31,7 +31,7 @@ ext_init_param() {
 
 chroot_post() {
 	ln -sf /run/systemd/resolve/resolv.conf $rootfs_mount_point/etc/resolv.conf
-	echo 'Server = https://opentuna.cn/archlinuxarm//$arch/$repo' > $rootfs_mount_point/etc/pacman.d/mirrorlist
+	echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo' > $rootfs_mount_point/etc/pacman.d/mirrorlist
 }
 
 add_services() {
