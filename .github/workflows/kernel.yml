@@ -8,8 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    name: Build kernel and release
+    permissions:
+      contents: write
     steps:
-
     - name: Initialize environment
       id: init
       env:
@@ -39,6 +41,6 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        draft: false
-        prerelease: false
+        draft: true
+        prerelease: true
         files: output/*
