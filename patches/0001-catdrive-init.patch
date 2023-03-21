@@ -5,9 +5,9 @@
  # Mvebu SoC Family
  dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-db.dtb
 +dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-catdrive.dtb
+ dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-eDPU.dtb
  dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-espressobin.dtb
  dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-espressobin-emmc.dtb
- dtb-$(CONFIG_ARCH_MVEBU) += armada-3720-espressobin-ultra.dtb
 --- /dev/null
 +++ b/arch/arm64/boot/dts/marvell/armada-3720-catdrive.dts
 @@ -0,0 +1,111 @@

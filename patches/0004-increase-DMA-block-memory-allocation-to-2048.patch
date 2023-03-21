@@ -1,6 +1,6 @@
 --- a/arch/arm/mm/dma-mapping.c
 +++ b/arch/arm/mm/dma-mapping.c
-@@ -315,7 +315,7 @@ static void *__alloc_remap_buffer(struct device *dev, size_t size, gfp_t gfp,
+@@ -182,7 +182,7 @@ static void *__alloc_remap_buffer(struct device *dev, size_t size, gfp_t gfp,
  				 pgprot_t prot, struct page **ret_page,
  				 const void *caller, bool want_vaddr);
  
