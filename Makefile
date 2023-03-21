@@ -1,5 +1,5 @@
 KERNEL := https://github.com/Izumiko/catdrive/releases/download
-RELEASE_TAG = kernel-release
+RELEASE_TAG = Kernel-5.10.175
 DTB := armada-3720-catdrive.dtb
 
 DTB_URL := $(KERNEL)/$(RELEASE_TAG)/$(DTB)
